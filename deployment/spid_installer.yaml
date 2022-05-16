@@ -10,3 +10,6 @@ permissions: # a list of keycloak clientId / role to bind each to the other
     role: manage-users
   - clientId: realm-management
     role: view-users
+environmentVariables:
+  - name: SPID_CONFIG_ACTIVE
+    value: "true"
