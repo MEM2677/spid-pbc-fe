@@ -1,6 +1,7 @@
-image: "jangalian/spid-provider-installer:3.16" # The docker image used to create the plugin
-deploymentBaseName: "spid-provider-installer" # The base name to assign to the pods that have to be created in Kubernetes
-dbms: "postgresql" # The DBMS the plugin will use
+descriptorVersion: v4
+image: jangalian/spid-provider-installer:3.16 # The docker image used to create the plugin
+deploymentBaseName: spid-provider-installer # The base name to assign to the pods that have to be created in Kubernetes
+dbms: none # The DBMS the plugin will use
 roles: # The roles the plugin will expose in keycloak
   - "spid-list"
 healthCheckPath: "/api/actuator/health" # The health check path that kubernetes will use to check status of the plugin deployment
