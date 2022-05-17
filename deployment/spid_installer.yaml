@@ -15,8 +15,8 @@ environmentVariables:
   - name: SPID_CONFIG_ACTIVE
     value: "true"
   - name: KEYCLOACK_HOSTS_CSV_LIST
-    value: "spid-entando.192-168-49-2.nip.io"
+    value: "forumpa.apps.psdemo.eng-entando.com"
   - name: KEYCLOACK_USERNAME
     value: "entando_keycloak_admin"
   - name: KEYCLOACK_PASSWORD
-    value: "N2ZhNzg5MTE0ZTcwNDFlMw=="
+    value: "Mzc2M2U1NjkyNDViNGE4OQ=="
