@@ -1,5 +1,5 @@
 descriptorVersion: v4
-image: jangalian/spid-provider-installer:3.19 # The docker image used to create the plugin
+image: jangalian/spid-provider-installer:3.20 # The docker image used to create the plugin
 deploymentBaseName: spid-provider-installer # The base name to assign to the pods that have to be created in Kubernetes
 dbms: none # The DBMS the plugin will use
 roles: # The roles the plugin will expose in keycloak
@@ -15,8 +15,8 @@ environmentVariables:
   - name: SPID_CONFIG_ACTIVE
     value: "true"
   - name: KEYCLOACK_HOSTS_CSV_LIST
-    value: "forumpa.apps.psdemo.eng-entando.com"
+    value: "null"
   - name: KEYCLOACK_USERNAME
-    value: "entando_keycloak_admin"
+    value: "null"
   - name: KEYCLOACK_PASSWORD
-    value: "Mzc2M2U1NjkyNDViNGE4OQ=="
+    value: "null"
