@@ -17,12 +17,9 @@ environmentVariables:
   - name: KEYCLOACK_HOSTS_CSV_LIST
     value: "null"
   - name: KEYCLOACK_USERNAME
-    valueFrom:
-      secretKeyRef:
-        name: default-sso-in-namespace-admin-secret
-        key: username
+    value: "null"
   - name: KEYCLOACK_PASSWORD
     valueFrom:
       secretKeyRef:
-        name: default-sso-in-namespace-admin-secret
+        name: 5ccb3ee5-sso-admin-password
         key: password
