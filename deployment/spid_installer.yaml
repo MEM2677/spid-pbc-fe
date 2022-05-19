@@ -1,12 +1,13 @@
 descriptorVersion: v4
-image: jangalian/spid-provider-installer:3.36 # The docker image used to create the plugin
-deploymentBaseName: spid-provider-installer # The base name to assign to the pods that have to be created in Kubernetes
-dbms: none # The DBMS the plugin will use
-roles: # The roles the plugin will expose in keycloak
+image: jangalian/spid-provider-installer:3.36
+deploymentBaseName: spid-provider-installer
+dbms: none
+# The roles the plugin will expose in keycloak
+roles:
   - "spid-list"
-healthCheckPath: "/actuator/health" # The health check path that kubernetes will use to check status of the plugin deployment
-ingressPath: "/spid" # the ingress path to assign to the plugin deployment
-permissions: # a list of keycloak clientId / role to bind each to the other
+healthCheckPath: "/actuator/health"
+ingressPath: "/spid"
+permissions:
   - clientId: realm-management
     role: manage-users
   - clientId: realm-management

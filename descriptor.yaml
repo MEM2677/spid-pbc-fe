@@ -1,5 +1,5 @@
-code: SPID bundle # The bundle ID
-description: Autenticazione SPID# The description of the bundle
+code: SPID Bundle
+description: Autenticazione SPID
 
 components: # All components will be here
 
