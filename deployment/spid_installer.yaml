@@ -1,5 +1,5 @@
 descriptorVersion: v4
-image: jangalian/spid-provider-installer:3.33 # The docker image used to create the plugin
+image: jangalian/spid-provider-installer:3.34 # The docker image used to create the plugin
 deploymentBaseName: spid-provider-installer # The base name to assign to the pods that have to be created in Kubernetes
 dbms: none # The DBMS the plugin will use
 roles: # The roles the plugin will expose in keycloak
@@ -17,6 +17,12 @@ environmentVariables:
   - name: KEYCLOACK_HOSTS_CSV_LIST
     value: "null"
   - name: KEYCLOACK_USERNAME
-    value: "null"
+    valueFrom:
+      secretKeyRef:
+        name: default-sso-in-namespace-admin-secret
+        key: username
   - name: KEYCLOACK_PASSWORD
-    value: "null"
+    valueFrom:
+      secretKeyRef:
+        name: default-sso-in-namespace-admin-secret
+        key: password
