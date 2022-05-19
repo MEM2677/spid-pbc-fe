@@ -14,10 +14,16 @@ permissions: # a list of keycloak clientId / role to bind each to the other
 environmentVariables:
   - name: SPID_CONFIG_ACTIVE
     value: "true"
-  - name: KEYCLOACK_HOSTS_CSV_LIST
-    value: "null"
+  - name: KEYCLOACK_HOST
+    valueFrom:
+      secretKeyRef:
+        name: 0c1f7fef-sso-url
+        key: url
   - name: KEYCLOACK_USERNAME
-    value: "null"
+    valueFrom:
+      secretKeyRef:
+        name: 0c1f7fef-sso-admin-username
+        key: username
   - name: KEYCLOACK_PASSWORD
     valueFrom:
       secretKeyRef:
