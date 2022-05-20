@@ -1,31 +1,39 @@
 descriptorVersion: v4
-image: jangalian/spid-provider-installer:3.36 # The docker image used to create the plugin
-deploymentBaseName: spid-provider-installer # The base name to assign to the pods that have to be created in Kubernetes
-dbms: none # The DBMS the plugin will use
-roles: # The roles the plugin will expose in keycloak
+image: jangalian/spid-provider-installer:3.36-forumpa
+deploymentBaseName: spid-provider-installer
+dbms: none
+# The roles the plugin will expose in keycloak
+roles:
   - "spid-list"
-healthCheckPath: "/actuator/health" # The health check path that kubernetes will use to check status of the plugin deployment
-ingressPath: "/spid" # the ingress path to assign to the plugin deployment
-permissions: # a list of keycloak clientId / role to bind each to the other
+
+# The health check path that kubernetes will use to check status of the plugin deployment
+
+healthCheckPath: "/actuator/health"
+# the ingress path to assign to the plugin deployment
+ingressPath: "/spid"
+
+# a list of keycloak clientId / role to bind each to the other
+permissions:
   - clientId: realm-management
     role: manage-users
   - clientId: realm-management
     role: view-users
+
 environmentVariables:
   - name: SPID_CONFIG_ACTIVE
     value: "true"
-  - name: KEYCLOACK_HOST
-    valueFrom:
-      secretKeyRef:
-        name: 0c1f7fef-sso-url
-        key: url
-  - name: KEYCLOACK_USERNAME
-    valueFrom:
-      secretKeyRef:
-        name: 0c1f7fef-sso-admin-username
-        key: username
-  - name: KEYCLOACK_PASSWORD
-    valueFrom:
-      secretKeyRef:
-        name: 0c1f7fef-sso-admin-password
-        key: password
+#  - name: KEYCLOACK_HOST
+#    valueFrom:
+#      secretKeyRef:
+#        name: 0c1f7fef-sso-url
+#        key: url
+#  - name: KEYCLOACK_USERNAME
+#    valueFrom:
+#      secretKeyRef:
+#        name: 0c1f7fef-sso-admin-username
+#        key: username
+#  - name: KEYCLOACK_PASSWORD
+#    valueFrom:
+#      secretKeyRef:
+#        name: 0c1f7fef-sso-admin-password
+#        key: password
