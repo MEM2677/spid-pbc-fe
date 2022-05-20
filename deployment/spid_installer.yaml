@@ -28,5 +28,5 @@ environmentVariables:
   - name: KEYCLOACK_PASSWORD
     valueFrom:
       secretKeyRef:
-        name: 5ccb3ee5-sso-admin-password
+        name: 0c1f7fef-sso-admin-password
         key: password
