@@ -5,7 +5,7 @@ dbms: none
 # The roles the plugin will expose in keycloak
 roles:
   - "spid-list"
-healthCheckPath: "/spid/actuator/health"
+healthCheckPath: "/actuator/health"
 ingressPath: "/spid"
 permissions:
   - clientId: realm-management
