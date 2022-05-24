@@ -1,5 +1,5 @@
 descriptorVersion: v4
-image: jangalian/spid-provider-installer:3.37-forumpa
+image: jangalian/spid-provider-installer:3.38-forumpa
 deploymentBaseName: spid-provider-installer
 dbms: none
 # The roles the plugin will expose in keycloak
