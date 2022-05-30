@@ -1,5 +1,5 @@
 descriptorVersion: v4
-image: jangalian/spid-provider-installer:3.38-forumpa-5
+image: jangalian/spid-provider-installer:3.38-forumpa-6
 deploymentBaseName: spid-provider-installer
 dbms: none
 # The roles the plugin will expose in keycloak
@@ -22,18 +22,3 @@ permissions:
 environmentVariables:
   - name: SPID_CONFIG_ACTIVE
     value: "true"
-#  - name: KEYCLOACK_HOST
-#    valueFrom:
-#      secretKeyRef:
-#        name: 0c1f7fef-sso-url
-#        key: url
-#  - name: KEYCLOACK_USERNAME
-#    valueFrom:
-#      secretKeyRef:
-#        name: 0c1f7fef-sso-admin-username
-#        key: username
-#  - name: KEYCLOACK_PASSWORD
-#    valueFrom:
-#      secretKeyRef:
-#        name: 0c1f7fef-sso-admin-password
-#        key: password
