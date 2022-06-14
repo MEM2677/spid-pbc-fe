@@ -5,7 +5,7 @@ components: # All components will be here
 
   # Optional. Use if the component requires a deployment
   plugins:
-    - deployment/spid_installer.yaml
+    - plugins/spid_installer.yaml
   #    - folder/you/want/another_plugin_descriptor.yaml
 
   # To create widgets you will need to add references to the descriptor file's
